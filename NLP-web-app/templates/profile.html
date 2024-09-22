@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NLP App | Welcome Page</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #343a40; /* Dark gray background */
+            color: #f8f9fa; /* Light text color */
+        }
+        .welcome-card {
+            background-color: #6c757d; /* Medium gray background */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Edge shadow */
+            transition: transform 0.2s; /* Animation */
+        }
+        .welcome-card:hover {
+            transform: scale(1.05); /* Scale up on hover */
+        }
+        .btn-primary:hover {
+            background-color: #5a6268; /* Darker shade on hover */
+        }
+        .dynamic-text {
+            font-size: 2rem;
+            font-weight: bold;
+            animation: colorChange 5s infinite;
+        }
+        @keyframes colorChange {
+            0% { color: #f8f9fa; }
+            25% { color: #17a2b8; }
+            50% { color: #28a745; }
+            75% { color: #ffc107; }
+            100% { color: #f8f9fa; }
+        }
+    </style>
+</head>
+<body class="d-flex justify-content-center align-items-center vh-100">
+    <div class="card welcome-card p-4 text-center" style="width: 400px;">
+        <h1 class="card-title">Welcome to NLP App, {{ name }}</h1>
+        <p class="dynamic-text">Your journey into Natural Language Processing starts here!</p>
+        <a href="/register" class="btn btn-primary btn-block">Get Started</a>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
